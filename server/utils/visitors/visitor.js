@@ -2,6 +2,7 @@ import { Visitor } from "../topiaInit.js";
 import error from "../errors.js";
 
 export const getVisitor = async (req, res) => {
+  console.log("HERE");
   const { assetId, interactivePublicKey, interactiveNonce, urlSlug, visitorId } = req.query;
   const { includeDataObject } = req.body;
   try {
