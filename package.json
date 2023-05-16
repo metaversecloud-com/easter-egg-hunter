@@ -19,8 +19,9 @@
   "license": "ISC",
   "main": "index.js",
   "scripts": {
-    "build": "if [ \"$HEROKU\" = \"true\" ]; then npm install && npm run build:client; else cd server && npm install && npm run build && cd .. && cd client && npm install && npm run build; fi",
-    "build:client": "cd client && npm run build",
+    "build": "cd client && npm install && npm run build",
+    "build:server": "npm run build",
+    "build:client": "npm run build --prefix client",
     "link-sdk": "yalc link @rtsdk/topia",
     "unlink-sdk": "yalc remove @rtsdk/topia",
     "server": "node server/index.js",
