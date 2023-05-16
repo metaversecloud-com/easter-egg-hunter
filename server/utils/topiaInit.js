@@ -6,7 +6,7 @@ import { Topia, AssetFactory, DroppedAssetFactory, UserFactory, VisitorFactory, 
 const config = {
   // apiDomain: process.env.INSTANCE_DOMAIN || "api-stage.topia.io",
   apiDomain: process.env.INSTANCE_DOMAIN || "api.topia.io",
-  apiKey: process.env.API_KEY,
+  // apiKey: process.env.API_KEY,
   apiProtocol: process.env.INSTANCE_PROTOCOL || "https",
   interactiveKey: process.env.INTERACTIVE_KEY,
   interactiveSecret: process.env.INTERACTIVE_SECRET,

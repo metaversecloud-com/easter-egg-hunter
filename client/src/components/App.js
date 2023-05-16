@@ -53,7 +53,7 @@ export function App() {
           visitor: result.data.visitor,
         });
       } else {
-        console.log("Error getting visitor");
+        console.log("Error getting visitor", result.data.error);
       }
     };
     getVisitor();
@@ -70,7 +70,7 @@ export function App() {
           world: result.data.world,
         });
       } else {
-        console.log("Error getting world");
+        console.log("Error getting world", result.data.error);
       }
     };
     getWorld();
