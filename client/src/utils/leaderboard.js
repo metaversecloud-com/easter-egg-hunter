@@ -2,7 +2,7 @@ import { backendAPI } from "@utils";
 
 export const getLeaderboardData = async ({ setLeaderboardData, globalDispatch }) => {
   const result = await backendAPI.get("/egg-leaderboard");
-  console.log(result);
+  console.log(result.data);
   let { leaderboard, success } = result.data;
   if (success) {
     setLeaderboardData({
