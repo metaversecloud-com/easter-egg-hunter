@@ -20,8 +20,6 @@
   "main": "index.js",
   "scripts": {
     "build": "cd client && npm install && npm run build",
-    "build:server": "npm run build",
-    "build:client": "npm run build --prefix client",
     "link-sdk": "yalc link @rtsdk/topia",
     "unlink-sdk": "yalc remove @rtsdk/topia",
     "server": "node server/index.js",
