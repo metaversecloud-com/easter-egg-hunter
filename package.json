@@ -11,6 +11,10 @@
     "express": "^4.18.2",
     "yalc": "^1.0.0-pre.53"
   },
+  "workspaces": [
+    "client",
+    "server"
+  ],
   "description": "",
   "engines": {
     "node": "18.14"
@@ -19,7 +23,9 @@
   "license": "ISC",
   "main": "index.js",
   "scripts": {
-    "build": "npm install && npm run build -w server && npm run build -w client",
+    "build": "npm install && npm run build:server && npm run build:client",
+    "build:server": "npm run build --prefix server",
+    "build:client": "npm run build --prefix client",
     "link-sdk": "yalc link @rtsdk/topia",
     "unlink-sdk": "yalc remove @rtsdk/topia",
     "server": "node server/index.js",
