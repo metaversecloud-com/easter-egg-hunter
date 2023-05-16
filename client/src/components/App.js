@@ -47,6 +47,7 @@ export function App() {
   useEffect(() => {
     const getVisitor = async () => {
       const result = await backendAPI.get("/visitor");
+      console.log(result);
       if (result.data.success) {
         setVisitorInfo({
           dispatch: globalDispatch,
@@ -63,6 +64,7 @@ export function App() {
   useEffect(() => {
     const getWorld = async () => {
       const result = await backendAPI.get("/world");
+      console.log(result);
       if (result.data.success) {
         console.log(result.data.world);
         setWorldInfo({
