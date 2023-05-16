@@ -23,7 +23,7 @@
   "license": "ISC",
   "main": "index.js",
   "scripts": {
-    "build": "npm install && cd client && npm install && npm run build",
+    "build": "cd client && npm install && npm run build",
     "build:server": "npm run build",
     "build:client": "npm run build --prefix client",
     "link-sdk": "yalc link @rtsdk/topia",
