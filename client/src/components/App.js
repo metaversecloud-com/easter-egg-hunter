@@ -56,8 +56,8 @@ export function App() {
         console.log("Error getting visitor", result.data.error);
       }
     };
-    getVisitor();
-  }, [globalDispatch]);
+    if (hasInitBackendAPI) getVisitor();
+  }, [globalDispatch, hasInitBackendAPI]);
 
   // Get Visitor info
   useEffect(() => {
@@ -73,12 +73,12 @@ export function App() {
         console.log("Error getting world", result.data.error);
       }
     };
-    getWorld();
-  }, [globalDispatch]);
+    if (hasInitBackendAPI) getWorld();
+  }, [globalDispatch, hasInitBackendAPI]);
 
   useEffect(() => {
-    getLeaderboardData({ setLeaderboardData, globalDispatch });
-  }, [globalDispatch]);
+    if (hasInitBackendAPI) getLeaderboardData({ setLeaderboardData, globalDispatch });
+  }, [globalDispatch, hasInitBackendAPI]);
 
   return (
     <Routes>

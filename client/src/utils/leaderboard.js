@@ -8,5 +8,5 @@ export const getLeaderboardData = async ({ setLeaderboardData, globalDispatch })
       dispatch: globalDispatch,
       leaderboardData: leaderboard,
     });
-  } else return console.log("ERROR getting data object");
+  } else return console.log("ERROR getting data object", result.data.error);
 };
