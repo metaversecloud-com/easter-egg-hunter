@@ -1,8 +1,11 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Admin, Leaderboard } from "../../components";
 
 // components
 import {
+  Accordion,
+  AccordionDetails,
+  AccordionSummary,
   Grid,
   // TextField,
   ToggleButton,
@@ -10,11 +13,15 @@ import {
   Typography,
 } from "@mui/material";
 
+import { ExpandMore } from "@mui/icons-material";
+
 // context
 import {
   // fetchWorld, useGlobalDispatch,
   useGlobalState,
 } from "@context";
+
+import { backendAPI } from "@utils";
 
 export function Home() {
   // const [droppedAsset, setDroppedAsset] = useState();
@@ -74,7 +81,7 @@ export function Home() {
               Admin
             </ToggleButton>
           </ToggleButtonGroup>
-          {toggle !== "admin" && message && (
+          {toggle !== "admin" && (
             <Grid item p={1} paddingTop={0}>
               <Accordion>
                 <AccordionSummary
